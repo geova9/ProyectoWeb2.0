@@ -1,0 +1,113 @@
+/* Sección Hobbies con Cards Neón Verde */
+/* Titulo de Hobbies*/
+.hobbies h2 {
+  color: #eaeaea;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.hobbies {
+  max-width: 1000px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hobbies h2 {
+  color: #eaeaea;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.hobbies hr {
+  margin: 0.5rem auto 2rem;
+  width: 60px;
+  height: 3px;
+  background: #4bc359;    
+  border: none;
+  border-radius: 2px;
+}
+
+/* Grid de tarjetas */
+.cards-hobbies {
+  display: inline-flex;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 1.5rem;
+}
+
+/* Cada tarjeta */
+.card-hobbies {
+  background: #17191b;
+  border-radius: 12px;
+  border: 1px solid rgba(75, 195, 89, 0.4);  
+  box-shadow: 0 4px 15px rgba(75, 195, 89, 0.2);
+  padding: 1.5rem;
+  color: #c1c1c1;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+}
+/*Color de la sombra de la tarjeta*/
+.card-hobbies:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+
+/* Cabecera interna de la tarjeta */
+.card-header-hobbies {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+/* Icono dentro de la cabecera */
+.icon-hobbies {
+  background-color: #4bc359;
+  color: #43dd55;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+
+/* Título de la tarjeta */
+ h3 {
+  color: #4bc359;
+  font-size: 1.25rem;
+  margin: 0;
+  
+}
+
+
+/* Texto de la tarjeta */
+.card-hobbies p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* Enlace “Leer más” */
+.card-hobbies .enlaces {
+  display: inline-block;
+  color: #4bc359;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.card-hobbies .enlaces:hover {
+  color: #81e993;
+}

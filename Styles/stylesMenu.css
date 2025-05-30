@@ -1,0 +1,127 @@
+/* === Variables globales === */
+:root {
+  --dropdown-width: 16rem;
+  --menu-offset: 0.5rem;
+  --bg-menu: rgba(30, 30, 35, 0.85);
+  --bg-item-hover: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 255, 100, 0.3);
+  --radius: 0.75rem;
+  --transition: 0.25s ease;
+  --text-light: #eaeaea;
+  --accent: #00ff64;
+}
+
+/* === Contenedor === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform var(--transition);
+}
+
+
+
+
+
+/* === Toggle button === */
+.dropdown-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 0.35rem;
+  cursor: pointer;
+  display: flex;
+
+  align-items: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+.dropdown-toggle:hover {
+  background: rgba(0, 255, 100, 0.1);
+  border-color: var(--text-light);
+}
+.dropdown-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 255, 100, 0.4);
+}
+
+
+/* === Panel del menú === */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + var(--menu-offset));
+  right: 0;
+  width: var(--dropdown-width);
+  margin: 0;
+  padding: 0.5rem 0;
+  background: var(--bg-menu);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.75rem);
+  transition:
+    opacity var(--transition),
+    transform var(--transition),
+    visibility var(--transition);
+  z-index: 50;
+}
+
+/* Mostrar */
+.dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* === Ítems del menú === */
+.dropdown-menu li {
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  transition: background var(--transition), padding-left var(--transition);
+}
+
+/* Agrega icono de punto  */
+.dropdown-menu a::before {
+  content: "•";
+  font-size: 0.8rem;
+  color: var(--accent);
+  opacity: 0.7;
+  transition: transform var(--transition);
+}
+
+/* Hover y foco */
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: var(--bg-item-hover);
+  padding-left: 1.2rem;
+}
+.dropdown-menu a:hover::before,
+.dropdown-menu a:focus::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Último ítem destacado 
+.dropdown-menu li:last-child a {
+  color: var(--accent);
+}*/
+
+

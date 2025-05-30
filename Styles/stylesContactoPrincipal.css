@@ -1,0 +1,110 @@
+
+
+/* Reset básico del body */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal de contacto */
+.contacto-Principal {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Título de la sección */
+.contacto-Principal .h2-Principal {
+  color: var(--text-light);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Línea horizontal bajo el título */
+.contacto-Principal hr {
+  margin: 0.5rem auto 2rem;
+  width: 60px;
+  height: 3px;
+  background-color: hsl(127, 50%, 53%);
+  border: none;
+  border-radius: 2px;
+}
+
+/* Contenedor del formulario */
+.contacto-cajon-Principal {
+  background: var(--bg-card);
+  padding: 2rem;
+  box-shadow: 0 8px 20px var(--shadow-green);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(75, 195, 89, 0.4);  
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+/* Efecto hover en el formulario */
+.contacto-cajon-Principal:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+
+/* Grupo label + campo */
+.form-group-Principal {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Etiquetas */
+.form-group-Principal label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs y textarea */
+.form-group-Principal input,
+.form-group-Principal textarea {
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #1a1a1a;
+  color: var(--text-light);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Foco en campos */
+.form-group-Principal input:focus,
+.form-group-Principal textarea:focus {
+  outline: none;
+  border-color: var(--green-hover);
+  box-shadow: 0 0 8px var(--shadow-green);
+}
+
+/* Botón de envío */
+.btn-enviar-Principal {
+  display: inline-block;
+  background: #4bc359;
+  color: #000;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;;
+}
+
+/* Hover en botón */
+.btn-enviar-Principal:hover {
+  background: var(--green-hover);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px var(--shadow-green);
+}
+
+/* Active en botón */
+.btn-enviar-Principal:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

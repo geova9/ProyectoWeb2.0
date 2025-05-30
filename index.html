@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geovanny Jiménez Briceño - Portfolio Personal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="/Styles/styles2.css" />
+  <link rel="stylesheet" href="/Styles/stylesSobreMi.css" />
+  <link rel="stylesheet" href="/Styles/stylesHobbiesCard.css" />
+  <link rel="stylesheet" href="/Styles/Circulo.css" />
+  <link rel="stylesheet" href="/Styles/stylesProyectos.css" />
+  <link rel="stylesheet" href="/Styles/stylesContactoPrincipal.css" />
+  <link rel="stylesheet" href="/Styles/stylesMenu.css">
+
+
+</head>
+<body class="fondo-animado">
+  <script src="/JavaScript/scroll2.js"></script>
+  <div id="vantajs-fog"></div>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">
+      <a href="/HTML/index.html">GeovannyDev</a></div>
+       <!-- Menú desplegable para mobile o como alternativa -->
+<div class="buscador">
+  <input type="text" id="buscador" placeholder="Buscar..."/>
+  <ul id="busca-sugerencias">
+  </ul>
+</div>
+ <script src="/JavaScript/buscador.js"></script>
+  <div class="dropdown">
+  <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+    <img src="/Imagenes/fotoMenu2.png" alt="Menú" class="menu-icon"> 
+  </button>
+  <ul class="dropdown-menu" aria-label="submenu">
+    <li><a href="/HTML/index.html">Inicio</a></li>
+    <li><a href="/HTML/sobremi.html">Sobre mí</a></li>
+    <li><a href="/HTML/hobbies.html">Hobbies</a></li>
+    <li><a href="/HTML/proyectos.html">Proyectos</a></li>
+    <li><a href="/HTML/contacto.html">Contacto</a></li>
+  </ul>
+</div>
+    </nav>
+    
+ 
+
+    <div class="header-container">
+    <div class="hero-content">
+      <h1>Hola, soy <span class="highlight">Geovanny Jiménez Briceño</span></h1>
+      <p>Estudiante de Desarrollo Web | Amante del deporte, la pesca y el anime</p>
+      <a href="#contacto-Principal" class="cta-button">Contáctame</a>
+    </div>
+   
+    <div  id="spline-container"  class="objeto-3d">
+      <!-- 1) Cargar el componente desde CDN -->
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+      <script type="module" src="/JavaScript/fallbackObjeto3d.js"></script>
+      <!-- 2) El custom element -->
+     
+    </div>
+      
+  </header>
+
+  <main class="container">
+    <section id="sobre-mi" class="sobre">
+  <h2>Sobre mí</h2>
+  <hr>
+  <div class="cards">
+    <div class="card">
+      <div class="card-header">
+        <div class="icon"><i class="faded-green"></i></div>
+        <h3>¿Quién Soy?</h3>
+      </div>
+      <p>
+        Soy un estudiante de Desarrollador Web
+        me apasiona la tecnología y disfruto de los desafíos que presenta el desarrollo web.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon"><i class="faded-green"></i></div>
+        <h3>Mi Objetivo</h3>
+      </div>
+      <p>
+        Mi objetivo es seguir aprendiendo y aplicar mis conocimientos actuales para ganar experiencia en diversas áreas como Front-end y Back-end. Me apasiona crear soluciones elegantes para problemas complejos.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="icon"><i class="faded-green"></i></div>
+        <h3>Mi Perfil</h3>
+      </div>
+      <p>
+        Me caracterizo por mi capacidad para adaptarme rápidamente a nuevos entornos de trabajo y tecnologías, mi atención al detalle y mi compromiso con la entrega de productos de alta calidad.
+      </p>
+    </div>
+  </div>
+   
+</section>
+
+
+
+
+
+   <section id="hobbies" class="hobbies">
+    <h2>Hobbies</h2>
+    <hr>
+  <div class="cards-hobbies">
+    <div class="card-hobbies">
+      <div class="card-header-hobbies">
+        <div class="icon-hobbies"><i class="faded-green"></i></div>
+        <h3>Mis Hobbies</h3>
+      </div>
+      <p>
+        Cada experiencia es una oportunidad para crecer, aprender y
+        descubrir lo mejor de la vida.
+      </p>
+      <a href="hobbies.html" class="enlaces">Leer más</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="proyectos" class="proyectos">
+       <h2>Proyectos</h2>
+    <hr>
+      <div class="cards-proyectos">
+        <div class="card-proyectos">
+          <div class="card-header-proyectos">
+            <div class="icon-proyectos"><i class="faded-green"></i></div>
+            <h3>Mis Proyectos</h3>
+          </div>
+          <p>
+            Aquí encontrarás una selección de mis proyectos más destacados,
+             donde he aplicado mis habilidades en desarrollo web.
+          </p>
+      
+      <div class="proyectos-list" id="lista-proyectos">
+        <div class="proyecto">📱 Aplicación para Acceso a una Base de Datos</div>
+        <div class="proyecto">🎮 Juego: Tres en Raya</div>
+        
+      </div>
+      <a href="proyectos.html" class="enlaces-proyectos">Leer más</a>
+        </div>
+    </section>
+
+  <section class="contacto-Principal">
+    <h2 class="h2-Principal">Contacto</h2>
+    <hr>
+ 
+<div id="contacto-Principal"   class="contacto-cajon-Principal">
+    
+  <form class="contacto-form-Principal">
+    <div class="form-group-Principal">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group-Principal">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group-Principal">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn-enviar-Principal">Enviar</button>
+  </form>
+</div>
+  
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Geovanny Jiménez | Proyecto Final de IT</p>
+  </footer>
+<script src="https://kit.fontawesome.com/a2e0e6f0a8.js" crossorigin="anonymous"></script>
+
+
+<script src="/JavaScript/animacionMenu.js"></script>
+
+
+</body>
+</html>

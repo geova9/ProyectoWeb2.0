@@ -1,0 +1,79 @@
+/* 
+   Sección Sobre Mí con Cards
+    */
+
+.sobre {
+  max-width: 2000px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.sobre h2 {
+  color: #eaeaea;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.sobre hr {
+  margin: 0.5rem auto 2rem;
+  width: 60px;
+  height: 3px;
+  background: #4bc359;
+  border: none;
+  border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.card {
+  background: #17191b;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 138, 51, 0.2);
+  box-shadow: 0 4px 15px rgba(11, 138, 51, 0.2);
+  padding: 1.5rem;
+  color: #c1c1c1;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+}
+/*Color de la sombra de la tarjeta*/
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header .icon {
+  background-color: #4bc359;
+  color: #4bc359;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.card-header h3 {
+  color: #4bc359;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

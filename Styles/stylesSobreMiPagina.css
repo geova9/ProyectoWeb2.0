@@ -1,0 +1,105 @@
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-card: #111;
+  --text-light: #eaeaea;
+  --green-hover: #81e993;
+  --shadow-green: rgba(75, 195, 89, 0.4);
+  --bg-gradient: radial-gradient(circle,rgb(15, 95, 46) 0%, rgb(26, 32, 27) 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+.titulo-pagina a {
+  display: block;
+  font-size: clamp(1.2rem, 5vw, 2.5rem);
+  color: #4bc359;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.subTitulo {
+display: block;
+font-family:clamp(1.2rem, 5vw, 2.5rem); ;
+text-align: center;
+font-size: 2rem;
+} 
+.hero {
+  position: relative;
+  background: var(--bg-gradient);
+  opacity: calc(1 - var(--scroll));
+}
+
+.first-article,
+.second-article {
+  width: 300px;
+  margin-left: 26%;
+  margin-right: auto;
+  width: 600px;
+  background: #17191b;
+  border-radius: 12px;
+  border: 1px solid rgba(75, 195, 89, 0.4);
+  box-shadow: 0 4px 15px rgba(75, 195, 89, 0.2);
+  padding: 1.5rem;
+  color: #c1c1c1;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.first-article p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.first-article:hover,
+.second-article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+
+
+.sobremi1 {
+  margin: 0 auto 30px;
+  display: block;
+  max-width: 30%;
+  border-radius: 10px;
+  border: 1px solid var(--shadow-green);
+  background-color: #131413;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.sobremi2{
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--shadow-green);
+  background-color: #131413;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.sobremi1.visible,
+.sobremi2.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+.animated-image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}

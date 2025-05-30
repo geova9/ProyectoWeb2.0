@@ -1,0 +1,104 @@
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-card: #111;
+  --text-light: #eaeaea;
+  --green-hover: #81e993;
+  --shadow-green: rgba(75, 195, 89, 0.4);
+  --bg-gradient: radial-gradient(circle,rgb(15, 95, 46) 0%, rgb(26, 32, 27) 100%);
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+.hero {
+  position: relative;
+  background: var(--bg-gradient);
+  opacity: calc(1 - var(--scroll));
+}
+h3 {
+  color: #4bc359;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.titulo-pagina a {
+ display: block;
+  font-size: clamp(1.2rem, 5vw, 2.5rem);
+  color: #4bc359;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* estilos para las imagenes logos*/
+.logoJava{
+  width: 70px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+
+}
+.logoSql{
+  width: 150px;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.logoHtml{
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.logoCss{
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+
+.logoJs{
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.proyect-image {
+  display: flex;
+  justify-content: center;  /* centra el conjunto en el contenedor padre */
+  align-items: center;
+  gap: 4rem; 
+}
+
+
+
+
+
+
+.first-proyect, .second-proyect, .third-proyect {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  background: #131414;
+  border-radius: 12px;
+  border: 1px solid rgba(75, 195, 89, 0.4);  
+  box-shadow: 0 4px 15px rgba(75, 195, 89, 0.2);
+  padding: 1.5rem;
+  color: #c1c1c1;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+}
+ .first-proyect p{
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.first-proyect:hover, .second-proyect:hover , .third-proyect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+

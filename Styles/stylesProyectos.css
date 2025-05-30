@@ -1,0 +1,103 @@
+
+/* Estilos para la sección de proyectos */
+/* titulo de proyectos */
+.proyectos h2 {
+  color: #eaeaea;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+}
+/*estiloss al hr de proyectos */
+.proyectos hr {
+  margin: 0.5rem auto 2rem;
+  width: 60px;
+  height: 3px;
+  background: #4bc359;
+  border: none;
+  border-radius: 2px;
+}
+
+.proyectos {
+  max-width: 1000px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Título de la tarjeta */
+.card-header-proyectos h3 {
+  color: #4bc359;
+  font-size: 1.25rem;
+  margin: 0;
+}
+/*iconos de la tarjeta */
+.icon-proyectos {
+  background: #4bc359;
+  color: #4bc359;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+/* Estilos para la titulo de la tarjeta de proyectos */
+.icon-proyectos h3 {
+  color: #4bc359;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+
+
+
+/* 1. Grid: usar 1fr para que las tarjetas ocupen todo el ancho disponible */
+.cards-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ← aquí */
+  gap: 1.5rem;
+  align-items: stretch; /* para que todas las tarjetas tengan igual altura */
+}
+
+/* 2. La tarjeta ocupa toda la celda y muestra cursor de mano */
+.card-proyectos {
+  background-color: #17191b;
+  border-radius: 12px;
+  border: 1px solid rgba(75, 195, 89, 0.4);
+  box-shadow: 0 4px 15px rgba(75, 195, 89, 0.2);
+  padding: 1.5rem;
+  color: #c1c1c1;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+  width: 100%;           /* ← garantizar ancho completo */
+  height: 100%;          /* ← garantizar altura completa */
+  cursor: pointer;       /* ← puntero sobre toda la tarjeta */
+}
+/*Color de la sombra de la tarjeta*/
+.card-proyectos:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 25px #4bc359;
+}
+
+/* 3. Centrar icono + título */
+.card-header-proyectos {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ← se añade para centrar */
+  margin-bottom: 1rem;
+}
+/* Enlace “Leer más” */
+.card-proyectos .enlaces-proyectos {
+  display: inline-block;
+  color: #4bc359;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+    margin-top: 2rem;
+}
+
+.card-proyectos .enlaces-proyectos:hover {
+  color: #81e993;
+}

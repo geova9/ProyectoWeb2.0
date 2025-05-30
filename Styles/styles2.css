@@ -1,0 +1,300 @@
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-dark-semitransparent: #0d0d0da8;
+  --bg-card: #111;
+  --text-light: #eaeaea;
+  --green-hover: #81e993;
+  --shadow-green: rgba(75, 195, 89, 0.4);
+  --bg-gradient: radial-gradient(circle,rgb(26, 141, 118) 0%, rgb(26, 32, 27) 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+.fondo-animado {
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: fondo 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -0.9s);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fondo {
+  0% {
+		background-position: 50% 0%;
+	}
+	100% {
+		background-position: 50% 100%;
+	}
+}
+
+a {
+  color: #4bc359;
+  text-decoration: none;
+}
+
+header.hero {
+  text-align: left; /* Cambiamos de center a left */
+  padding: 2rem 5%; /* Añadimos padding horizontal */
+  display: flex; /* Convertimos en flex container */
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+.logo {
+  z-index: 1;   /* para que no quede debajo del título */
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4bc359;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 500px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
+.header-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 5%;
+}
+/*estilos para el nombre de la pagina */
+.titulo-pagina {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 4rem;
+  color: var(--green-hover);
+  white-space: nowrap;
+}
+.header-container .hero-content {
+  flex: 1;
+  width: auto;   /* Anula el width:100% previo */
+}
+
+
+.hero-content {
+  margin-top: 2rem;
+  text-align: left; /* Aseguramos alineación izquierda */
+  max-width: none; /* Eliminamos la limitación de ancho */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea contenido a la izquierda */
+}
+.hero-content h1 {
+  text-align: left; /* Alineación izquierda para el título */
+  margin: 0; /* Eliminamos margen automático */
+  max-width: none; /* Eliminamos limitación de ancho */
+}
+
+
+.highlight {
+  color: #4bc359;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #4bc359;
+  border-radius: 8px;
+  color: #4bc359;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #4bc359;
+  color: #0d0d0d;
+}
+
+main.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+main.container.section-sobreMi {
+  max-width: none;
+}
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  
+}
+
+h2 {
+  color: #4bc359;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #4bc359;
+  color: #0d0d0d;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*para todos los hover que hay, esto los cambia el fondo a verde*/
+button:hover {
+  background-color: #4bc359;
+}
+/*aqui ponemos lo elementos que no queremos que cambien*/
+.dropdown-toggle:hover {
+  background-color: transparent;
+}
+
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
+.hobby-list, .proyectos-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.hobby, .proyecto {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #333;
+}
+ .hero-content h1 {
+  color: #ffffff !important;
+}
+/* Estilos para el contenedor 3D*/
+
+
+.objeto-3d {
+  /* Ocupa la mitad del ancho de .header-container */
+  flex: 1;
+  max-width: 600px;    /* opcional: límite de ancho */
+  height: 400px;       /* altura fija (ajústala a tu gusto) */
+  margin-left: 2rem;   /* separa del contenido textual */
+  position: relative;  /* por si quisieras posicionar elementos internos */
+}
+
+/* Asegura que el spline-viewer llene todo el contenedor */
+.objeto-3d spline-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Responsive: en pantallas pequeñas, que vaya debajo del texto */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .objeto-3d {
+    width: 90%;
+    max-width: none;
+    height: 300px;
+    margin: 2rem auto 0;
+  }
+}
+
+
+
+
+
+/*estilos para el buscador */
+
+.buscador {
+  position: relative; /* importante para posicionar la lista */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buscador input{
+  width: clamp(200px, 30vw, 600px);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.buscador input:hover {
+  box-shadow: 0 10px 15px  #255a2b ;
+  transform: translateY(-5px);
+}
+
+#busca-sugerencias {
+  list-style: none;
+  padding: 0;
+  margin: 0.1rem 0 0 0;
+  width: clamp(200px, 30vw, 600px);
+  border: 1px solid var(--shadow-green);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: var(--bg-dark-semitransparent);
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  display: none; /* oculto por defecto */
+  backdrop-filter: blur(10px);
+}
+
+#busca-sugerencias li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#busca-sugerencias li:hover {
+  background: linear-gradient(90deg, rgba(75, 195, 89, 0.4), rgba(65, 225, 209, 0.4));
+}
